@@ -186,6 +186,7 @@ int main(int argc, char* argv[]){
             while(getline(file1, init_line)){ //iterates through each line of the file
 
                 leng = init_line.length();
+                line = "";
 
                 for(int i = 0; i < leng; i++){ //for loop to iterate through string and lowercase
 
@@ -195,10 +196,12 @@ int main(int argc, char* argv[]){
                         line += init_line[i];
                     }
                 }
-
-            }
-                new_leng = new_line.length();
+                new_leng = line.length();
+                cout<<new_leng<<"new leng"<<endl;
+                cout<<mean<<"mean"<<endl;
                 sd_num += ((new_leng-mean)*(new_leng-mean));
+                cout<<sd_num<<"sdnum"<<endl;
+            }
 
     file1.close(); //close file when done
 
